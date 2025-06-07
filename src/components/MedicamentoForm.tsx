@@ -49,7 +49,7 @@ export default function MedicamentoForm({ onSuccess }: { onSuccess: () => void }
     fetchTipos();
   }, []);
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
