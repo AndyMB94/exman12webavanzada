@@ -23,9 +23,9 @@ ENV NODE_ENV=production
 
 # Copia los archivos necesarios desde el builder
 COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/prisma ./prisma
-COPY --from=builder /app/next.config.js ./
 COPY --from=builder /app/.env ./
 
 # Instala solo dependencias de producción
